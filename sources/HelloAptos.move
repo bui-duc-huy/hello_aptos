@@ -14,6 +14,10 @@ module hello_aptos::message {
         to_message: string::String,
     }
 
+    public fun get_message(addr: address): string::String acquires MessageHolder {
+        *&borrow_global<MessageHolder>(addr).message
+    }
+
     public fun set_message(account: signer, message: string::String) acquires MessageHolder {
         let account_addr = signer::address_of(&account);
         

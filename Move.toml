@@ -3,7 +3,7 @@ name = 'hello_aptos'
 version = '1.0.0'
 
 [addresses]
-hello_aptos = "0x14124"
+hello_aptos = "_"
 
 [dependencies.AptosFramework]
 git = 'https://github.com/aptos-labs/aptos-core.git'
